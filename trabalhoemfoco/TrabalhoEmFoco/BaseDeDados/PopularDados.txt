@@ -1,0 +1,6 @@
+﻿insert into usuario values ('Henrique', 'henrique_assreuy@hotmail.com', 'teste', 1);
+
+insert into Perfil values ('Super Administrador');
+insert into Perfil values ('Administrador');
+insert into Perfil values ('Colaborador');
+insert into Perfil values ('Aluno');
