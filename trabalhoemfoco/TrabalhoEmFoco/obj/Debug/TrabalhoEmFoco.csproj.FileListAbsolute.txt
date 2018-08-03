@@ -193,3 +193,7 @@ D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\obj\Debug\TrabalhoEmFo
 D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\obj\Debug\TrabalhoEmFoco.csproj.CoreCompileInputs.cache
 D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\obj\Debug\TrabalhoEmFoco.dll
 D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\obj\Debug\TrabalhoEmFoco.pdb
+D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\bin\EntityFramework.dll
+D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\bin\EntityFramework.SqlServer.dll
+D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\bin\EntityFramework.xml
+D:\Workspace\TrabalhoEmFoco\trabalhoemfoco\TrabalhoEmFoco\bin\EntityFramework.SqlServer.xml
