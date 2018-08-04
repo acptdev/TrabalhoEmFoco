@@ -109,4 +109,104 @@ GO
 ALTER DATABASE [TrabalhoEmFoco] SET  READ_WRITE 
 GO
 
+/**** Criando as tabelas ******/
 
+/** Object:  Table [dbo].[EmpCol]    Script Date: 04/08/2018 09:42:01 **/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[EmpCol](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[RazaoSocial] [varchar](50) NULL,
+	[CNPJ] [varchar](20) NULL,
+	[Endereco] [varchar](50) NULL,
+	[InscricaoEstadual] [varchar](50) NULL,
+	[Telefone] [varchar](14) NULL,
+	[Email] [varchar](50) NULL,
+	[Responsavel] [varchar](50) NULL,
+	[QtdUsuarios] [int] NULL,
+	[Usuario] [varchar](50) NULL,
+	[Senha] [varchar](50) NULL,
+	[IdPerfil] [int] NULL,
+	[Ativo] [bit] NOT NULL,
+	[Tipo] [varchar](8) NOT NULL,
+ CONSTRAINT [PK_EmpCol] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [TrabalhoEmFoco]
+GO
+
+/** Object:  Table [dbo].[Perfil]    Script Date: 04/08/2018 09:50:46 **/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Perfil](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [varchar](50) NULL,
+ CONSTRAINT [PK_Perfil] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [TrabalhoEmFoco]
+GO
+
+/** Object:  Table [dbo].[Usuario]    Script Date: 04/08/2018 09:51:04 **/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Usuario](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[Senha] [varchar](50) NOT NULL,
+	[IdPerfil] [int] NOT NULL,
+ CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Usuario]  WITH CHECK ADD  CONSTRAINT [FK_Usuario_Perfil] FOREIGN KEY([IdPerfil])
+REFERENCES [dbo].[Perfil] ([Id])
+GO
+
+ALTER TABLE [dbo].[Usuario] CHECK CONSTRAINT [FK_Usuario_Perfil]
+GO
