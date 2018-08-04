@@ -17,7 +17,14 @@ namespace TrabalhoEmFoco.Controllers
         // GET: Colegio
         public ActionResult Index()
         {
-            return View(db.EmpCol.ToList());
+            if (Session["Usuario"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View(db.EmpCol.ToList());
+            }
         }
 
         // GET: Colegio/Details/5

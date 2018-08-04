@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Trabalho em Foco";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewLogada</h2>
+
+@{
+    dynamic usr = Session["Usuario"];
+    
+    <table>
+        @if(usr.IdPerfil == 1) { 
+        <tr>
+            <td>
+                @Html.ActionLink("Empresa", "Index", "Empresa")
+            </td>
+        </tr>
+        }
+
+
+        @if(usr.IdPerfil == 2) { 
+        <tr>
+            <td>
+                @Html.ActionLink("Colégio", "Index", "Colegio")
+            </td>
+        </tr>
+        }
+    </table>
+    @Html.ActionLink("Sair", "Sair", "Home", new { @class = "btn btn-default"})
+}
