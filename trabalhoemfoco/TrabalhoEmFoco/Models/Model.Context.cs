@@ -13,10 +13,10 @@ namespace TrabalhoEmFoco.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TrabalhoEmFocoEntities : DbContext
+    public partial class TrabalhoEmFocoEntities1 : DbContext
     {
-        public TrabalhoEmFocoEntities()
-            : base("name=TrabalhoEmFocoEntities")
+        public TrabalhoEmFocoEntities1()
+            : base("name=TrabalhoEmFocoEntities1")
         {
         }
     

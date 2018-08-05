@@ -117,7 +117,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TrabalhoEmFocoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TrabalhoEmFocoEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EmpCol" EntityType="Self.EmpCol" />
           <EntitySet Name="Perfil" EntityType="Self.Perfil" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
@@ -131,7 +131,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TrabalhoEmFocoModelStoreContainer" CdmEntityContainer="TrabalhoEmFocoEntities">
+        <EntityContainerMapping StorageEntityContainer="TrabalhoEmFocoModelStoreContainer" CdmEntityContainer="TrabalhoEmFocoEntities1">
           <EntitySetMapping Name="EmpCol">
             <EntityTypeMapping TypeName="TrabalhoEmFocoModel.EmpCol">
               <MappingFragment StoreEntitySet="EmpCol">

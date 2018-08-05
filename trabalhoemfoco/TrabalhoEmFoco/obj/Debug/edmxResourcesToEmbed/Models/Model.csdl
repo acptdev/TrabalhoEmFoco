@@ -50,7 +50,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TrabalhoEmFocoEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TrabalhoEmFocoEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="EmpCol" EntityType="Self.EmpCol" />
     <EntitySet Name="Perfil" EntityType="Self.Perfil" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />

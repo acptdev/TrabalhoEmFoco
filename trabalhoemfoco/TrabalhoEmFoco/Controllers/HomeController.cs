@@ -9,7 +9,7 @@ namespace TrabalhoEmFoco.Controllers
 {
 	public class HomeController : Controller
 	{
-        private TrabalhoEmFocoEntities db = new TrabalhoEmFocoEntities();
+        private TrabalhoEmFocoEntities1 db = new TrabalhoEmFocoEntities1();
 
         //[HttpPost]
         //[ValidateAntiForgeryToken]

@@ -12,7 +12,7 @@ namespace TrabalhoEmFoco.Controllers
 {
     public class UsuarioController : Controller
     {
-        private TrabalhoEmFocoEntities db = new TrabalhoEmFocoEntities();
+        private TrabalhoEmFocoEntities1 db = new TrabalhoEmFocoEntities1();
 
         // GET: Usuario
         public ActionResult Index()
